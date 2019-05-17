@@ -39,6 +39,8 @@ def main(argv):
 			encode.encode(input_file, path)
 		else:
 			decode.decode(input_file, path)
+	except AttributeError:
+		print('Invalid image input')
 	except Exception as inst:
 		print(type(inst))
 		print(inst.args)
